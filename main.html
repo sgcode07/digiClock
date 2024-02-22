@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        #Clock {
+            color: beige;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1{
+            color: rgb(235, 240, 240);
+            text-align: center;
+        }
+        .main{
+            margin: 187px 50px 50px 50px;
+        }
+    </style>
+</head>
+<body style="background-color: blueviolet;">
+    <div class="main">
+        <h1>Digital Clock</h1>
+        <div id="Clock"></div>
+    </div>
+    <script>
+        var clk = document.getElementById('Clock');
+        setInterval(function () {
+            var now = new Date();
+            clk.textContent = now.toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>
